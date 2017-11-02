@@ -3,7 +3,7 @@
 
 var MPD = require('mpd');
 var GPIO = require('rpi-gpio');
-var LCD = require("i2c-lcd");
+// var LCD = require("i2c-lcd");
 var _ = require('underscore');
 var Promise = require('bluebird');
 var assert = require('assert');
@@ -27,13 +27,13 @@ const logger = new (winston.Logger)({
 
 GPIO.setMode(GPIO.MODE_RPI);
 
-var screen = new LCD("/dev/i2c-1", 0x27);
+// var screen = new LCD("/dev/i2c-1", 0x27);
 var playlist_url = "https://gist.githubusercontent.com/raphaelyancey/8fc80854b18bb8100c6382c08ad815eb/raw/";
 
-screen.init().catch(function() {
-  logger.warn('warning', "Couldn't find a LCD display.");
-  screen = null;
-});
+// screen.init().catch(function() {
+//   logger.warn('warning', "Couldn't find a LCD display.");
+//   screen = null;
+// });
 
 // WIP
 // Overloading the print function to either wrap the text
