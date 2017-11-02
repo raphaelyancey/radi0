@@ -2,7 +2,7 @@ module.exports = {
   apps : [
     {
       name      : 'radi0',
-      script    : './main.js',
+      script    : __dirname + '/main.js',
       instances: 1,
       //watch: true,
       //max_memory_restart: '100M',
